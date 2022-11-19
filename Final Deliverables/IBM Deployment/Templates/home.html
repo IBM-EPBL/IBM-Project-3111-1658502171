@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loan Prediction</title>
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://codepen.io/skjha5993/pen/bXqWpR.css">
+  </head>
+  <body>
+    <header class="speaker-form-header">
+      <center><h1>SMART LOAN PREDICTION</h1></center>
+
+    </header>
+    {% block content %}
+        <div class="container">
+    <form action="{{ url_for('predict') }}" method="post" class="speaker-form">
+      <div class="form-row">
+        <label for="full-name">Name</label>
+        <input id="full-name" name="full-name" class="form-control" type="text" required/>
+      </div>
+      <div >
+
+      </div>
+      <br><br>
+      <div class="form-row">
+
+        <button class="btn btn-primary float-right">Submit</button>
+      </div>
+    </form>
+        </div>
+    {% endblock %}
+  </body>
+</html>
